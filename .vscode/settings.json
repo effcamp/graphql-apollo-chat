@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "__error": "objectItem not found",
+    ".vscode": true,
+    "client\\node_modules": true
+  }
+}
