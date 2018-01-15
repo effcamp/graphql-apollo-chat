@@ -2,10 +2,11 @@
   "scripts": {
     "server": "nodemon server/server.js",
     "start": "node server/server.js",
-    "client": "yarn start --prefix client",
+    "client": "npm run start --prefix client",
     "dev": "concurrently \"yarn run server\" \"yarn run client\""
   },
   "dependencies": {
+    "axios": "^0.17.1",
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
     "graphql": "^0.12.3",
@@ -13,5 +14,11 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1"
-  }
+  },
+  "name": "gql-chat-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/effcamp/graphql-apollo-chat.git",
+  "author": "effcamp <fcf.camposx@gmail.com>",
+  "license": "MIT"
 }

@@ -16,19 +16,19 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-const ChannelsList = ({ data: { loading, error, channels } }) => {
+const ChannelsList = ({ data: { loading, error, users } }) => {
   if (loading) {
     return <p>Loading...</p>;
   }
   if (error) {
     return <p>{error.message}</p>;
   }
-  return <ul>{channels.map((ch) => <li key={ch.id}>{ch.name}</li>)}</ul>;
+  return <ul>{users.map((user) => <li key={user.id}>{user.name}</li>)}</ul>;
 };
 
 const channelsListQuery = gql`
-  query ChannelsListQuery {
-    channels {
+  query UsersQuery {
+    users {
       id
       name
     }
