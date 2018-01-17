@@ -1,20 +1,9 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
-const { schema, root } = require('./schemas/schema');
+const { schema, root } = require('./src/schema');
 
 const app = express();
 const PORT = 3001;
-
-const channels = [
-  {
-    id: '1',
-    name: 'Channel 1'
-  },
-  {
-    id: '2',
-    name: 'Channel 2'
-  }
-];
 
 app.use(
   '/graphql',
